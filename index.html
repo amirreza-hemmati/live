@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>live</title>
+    <link rel="stylesheet" href="bootstrap.min.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text-center display-2 py-4 mb-4 font-weight-bold">Video Live</h1>
+      <br>
+      <br>
+      <br>
+
+      <div class="alert alert-success text-center h2">
+        You'r user id is => <span class="badge badge-dark" id="displayId">
+          loading the id ...e
+        </span>
+      </div>
+      <div class="row">
+
+        <div class="col-sm-6 col-md-6 col-lg-6">
+          local
+          <video id="lVideo" style="width: 100%"  autoplay muted></video>
+        </div>
+
+        <div class="col-sm-6 col-md-6 col-lg-6">
+          remote
+          <video id="rVideo"  style="width: 100%" autoplay></video>
+        </div>
+
+        <input
+          type="text"
+          id="connId"
+          class="form-control mt-4"
+          placeholder="enter a message"
+          required
+        />
+        <button
+          type="submit"
+          id="call-button"
+          class="btn mt-3 btn-lg btn-danger btn-block"
+        >
+          Call
+        </button>
+      </div>
+    </div>
+
+    <script src="peerjs.js"></script>
+    <script src="client.js"></script>
+  </body>
+</html>
